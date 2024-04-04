@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOONMANGE</title>
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!--font Awesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--slick js-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="css/home1.css">
+
+</head>
+
+<body background="imge/back.jpg">
+  <!--เมนูด้านบน-->
+
+  <head>
+    <nav>
+      <ul class="nav-bar">
+        <li class="logo"><a href=""><img src="imge/toon.png" alt="Toonmange"></a></li>
+        <input type="checkbox" id="check">
+        <span class="menu">
+          <li><a href="">หน้าแรก</a></li>
+          <li><a href="">มังงะที่จบแล้ว</a></li>
+          <li><a href="">Bookmark</a></li>
+          <li><a href="">ฝากผลงานแปล</a></li>
+          <li><a href="">มังงะแนะนำ</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+      </ul>
+    </nav>
+    <div class="slideshow">
+      <div class="items">
+        <img src="imge/5.jpg" alt="">
+      </div>
+      <div class="items">
+        <img src="imge/1.jpg" alt="">
+      </div>
+      <div class="items">
+        <img src="imge/2.jpg" alt="">
+      </div>
+      <div class="items">
+        <img src="imge/3.jpg" alt="">
+      </div>
+      <div class="items">
+        <img src="imge/4.jpg" alt="">
+      </div>
+    </div>
+    <div class="scroll-btn">
+      <i class="fas fa-arrow-circle-up"></i>
+    </div>
+    <!--กล่องโช-->
+    <br>
+    <div class="releases">
+      <h2>มังงะแนะนำ</h2>
+    </div>
+      <div class="grid">
+        <div class="content">
+          <img class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img  class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img  class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+        <div class="content">
+          <img class="imge" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box">
+            <h2>กล่องที่ 1</h2>
+            <p>เนื้อหาของกล่องที่ 1</p>
+            <img class="imge1" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge1" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge1" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge1" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          </div>
+        </div>
+        <div class="box2">
+        <div class="box-2">
+          <h2>กล่องที่ 2</h2>
+          <p>เนื้อหาของกล่องที่ 2</p>
+          <img class="imge2" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge2" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge2" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+          <img class="imge2" src="imge/back1.png" alt="">
+          <p>มังงะแนะนำ</p>
+        </div>
+      </div>
+  <!--scriptรูปภาพ-->
+  <script>
+    $(document).ready(() => {
+      $('.slideshow').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+      });
+      $(".slideshow .slick-prev").html('<i class="fa-solid fa-arrow-left"></i>')
+      $(".slideshow .slick-next").html('<i class="fa-solid fa-arrow-right"></i>')
+      $(".slideshow .slick-dots li").html('')
+    })</script>
+  <!--script java-->
+  <script src="java/arrow.js"></script>
+  <footer>
+    <div class="foo">
+      <p>TOONMANGE มังงะแปลไทย จีน ญี่ปุ่น เกาหลี ฯลฯ อ่านฟรีทุกวัน ทั้งใน Computer Tablet Mobile ทั้ง Android/iOS ฯลฯ
+        ติดต่อ/ฝากผลงานแปลได้ที่ E-mail: TOONMANGE@gmail.com</p>
+    </div>
+  </footer>
+</body>
+
+</html>

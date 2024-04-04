@@ -1,0 +1,254 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     
+}
+.box2 {
+     margin-right: 32%;
+     margin-left: 150px;
+     margin-top: -100px; /* ขยับกล่องขึ้นข้างบนไป*/
+   }
+   
+   .box-2 {
+     box-sizing: border-box;
+     padding: 20px;
+     background-color: #212121;
+   }
+   
+   .image2 {
+     max-width: 100px;
+     max-height: 150px;
+     display: inline-block;
+   }
+   .box1{
+     margin-left: 70%;
+     margin-right: 150px;
+   }
+   .box {
+     box-sizing: border-box;
+     padding: 20px;
+     box-sizing: border-box; /* ให้ padding และ border นับเข้าไปในขนาด */
+     background-color: #212121;
+   }
+   .imge1 {
+     max-width: 100%;
+     max-height: 100%;
+     height: auto;
+   }
+/*-----------------มังงะแนะ------------------------*/
+.foo {
+     background-color: var(--color2);
+     color: var(--color1);
+     padding: 100px;
+     margin-top: 1900px;
+     text-align: center;
+}
+.releases {
+     background-color: #2741AC;
+     box-sizing: border-box;
+     padding: 10px;
+     margin-bottom: -10px;
+     margin-top: 0;
+     margin-left: 150px; /* เพิ่มระยะห่างด้านซ้าย */
+     margin-right: 150px; /* เพิ่มระยะห่างด้านขวา */
+     color: black; /* กำหนดสีตัวหนังสือเป็นสีดำ */
+     background-clip: padding-box; /* ตั้งค่าการคลิปพื้นหลังเฉพาะในพื้นที่ padding */
+   }
+.grid {
+     display: flex;
+     flex-wrap: wrap; /* ทำให้รายการของเราไปอยู่ในบรรทัดใหม่เมื่อขนาดของหน้าจอเล็กลง */
+     justify-content: space-evenly; /* จัดเรียงรายการให้อยู่ตรงกลาง */
+     background-color: var(--color2); /* กำหนดพื้นหลังเป็นสีดำ */
+     padding: 20px; /* เพิ่ม Padding เพื่อเว้นระยะห่างรอบขอบของ grid */
+     margin:  150px;
+     row-gap: 1px;
+     column-gap: 0 auto;
+     margin-top: 10px;
+}
+   
+   .content {
+     flex: 0 0 calc(33.33% - 20px); /* ให้แต่ละ content มีขนาดเท่ากับ 33.33% ของพื้นที่ grid */
+     margin: 10px; /* เพิ่ม margin เพื่อให้มีระยะห่างระหว่าง content */
+     background-color: var(--color2); /* กำหนดพื้นหลังเป็นสีดำ */
+     padding: 10px; /* เพิ่ม padding 10px */
+     text-align: center; /* จัดเนื้อหากลาง */
+   }
+.imge {
+     max-width: 100%;
+     max-height: 100%;
+     height: auto;
+}
+/*ลูกศรกดขึ้นด้านบน-----------------------------------------*/
+   .scroll-btn {
+     font-size: 3rem;
+     cursor: pointer;
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+   }
+   .scroll-btn:hover {
+     color: gray;
+   }
+/*เมนูหน้าบน + logo------------------------------------*/
+
+body {
+     min-height: 500vh;
+     font-family: "Poppins", sans-serif;
+     --color1: #fff;
+     --color2: #181818;
+}
+
+.nav-bar{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     list-style: none;
+     position: relative;
+     background-color: var(--color2);
+     padding: 12px 20px;
+}
+
+:root{
+     --primary--color : #edf2fc;
+     --secondary-color : #212121;
+}
+
+
+#icon{
+     width: 30px;
+     cursor: pointer;
+}
+nav ul{
+     flex: 1;
+     text-align: right;
+
+}
+
+.logo img {
+     width: 300px;
+}
+.menu {
+     display: flex;
+}
+.menu li{
+     padding-left: 30px;
+}
+.menu li a {
+     display: inline-block;
+     text-decoration: none;
+     color: var(--color1);
+     text-align: center;
+     transition: 0.15s ease-in-out; 
+     position: relative;
+     text-transform: uppercase;
+}
+.menu li a::after{
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 1px;
+     background-color: var(--color1);
+     transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+     position: absolute;
+     color: var(--color1);
+     cursor: pointer;
+     font-size: 1.5rem;
+     display: none;
+}
+.open-menu {
+     top: 50%;
+     right: 20px;
+     transform: translateY(-50%);
+}
+.close-menu {
+     top:15px;
+     right: 20px;
+}
+#check{display: none;}
+/*สไลรูปภาพ---------------------------------*/
+.slideshow{
+     max-width: 1000px;
+     max-height: 200px;
+     margin: 0 auto;
+     margin-top: 100px;
+}
+
+.items{
+     max-width: 1000px;
+     max-height: 200px;
+     border-radius: 20px;
+     overflow: hidden;
+}
+.items img {
+     width: 1000px;
+     height: 200px;
+     object-fit: cover;
+}
+.slideshow .slick-prev{
+     position: absolute;
+     top: 80px;
+     left: 20px;
+     z-index: 10;
+     border-radius: 50%;
+}
+.slideshow .slick-next {
+     position: absolute;
+     top: 80px;
+     right: 20px;
+     z-index: 10;
+     border-radius: 50%;
+}
+.slideshow .slock-arrow {
+     z-index: 10px;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.slideshow .slick-dots {
+     position: absolute;
+     bottom: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+.slideshow .slick-dots li {
+     list-style: none;
+     margin: 0 2px;
+     width: 10px;
+     height: 10px;
+     background-color: white;
+     border-radius: 50%;
+}
+.slideshow .slick-active{
+     background-color: black !important;
+}
+
+@media(max-width:610px){
+     .menu{
+          flex-direction: column;
+          align-items: center;
+          justify-items: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: var(--color2);
+          transition: all 0.2s ease-in-out;
+     }
+     .menu li {margin-top: 40px;}
+     .menu li a {padding: 10px;}
+     .open-menu , .close-menu{display: block;}
+     #check:checked ~ .menu{right: 0;}
+}
